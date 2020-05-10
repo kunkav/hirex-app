@@ -85,7 +85,7 @@ exports.login = (req, res) => {
         if(err.code == 'auth/wrong-password') {
             return res.status(403).json({ error: 'You entered a wrong password'});
         }
-        return res.status(500).json({error: err.code()});
+        return res.status(500).json({error: err.code});
     })
 }
 
